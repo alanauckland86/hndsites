@@ -16,11 +16,13 @@
 					<option>Ms</option>
 					<option>Dr</option>
 				</select><br><br>
-				
+
 				<label for="txtFirstname">Firstname: </label>
 				<input type="text" name="txtFirstname" id="txtFirstname"><br><br>
+
 				<label for="txtSurname">Surname: </label>
 				<input type="text" name="txtSurname" id="txtSurname"><br><br>
+				
 				<input type="submit" value="Submit">
 			</fieldset><br>
 		</form>
