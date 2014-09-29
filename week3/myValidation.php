@@ -18,10 +18,10 @@
 				</select>
 
 				<label for="txtFirstname">Firstname: </label>
-				<input type="text" name="txtFirstname" id="txtFirstname" required>
+				<input type="text" name="txtFirstname" id="txtFirstname" >
 
 				<label for="txtSurname">Surname: </label>
-				<input type="text" name="txtSurname" id="txtSurname" required>
+				<input type="text" name="txtSurname" id="txtSurname" >
 				</br></br>
 
 				<label for="txtUsrName">User Name: </label>
@@ -32,8 +32,8 @@
 				<input type="text" name="txtUsrPassword" id="txtUsrPassword">
 					</br></br>
 
-				<label for="txtUsrPasswordConfim">Confirm Password: </label>
-				<input type="text" name="txtUsrPasswordConfim" id="txtUsrPasswordConfim">
+				<label for="txtUsrPasswordConfirm">Confirm Password: </label>
+				<input type="text" name="txtUsrPasswordConfirm" id="txtUsrPasswordConfirm">
 						</br></br>
 
 				<label for="txtUsrEmail">Please enter a Valid E-mail address</label>
