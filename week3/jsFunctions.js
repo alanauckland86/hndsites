@@ -40,28 +40,46 @@ function validateForm() {
 		 	return false;
 		 }
 
-            // check password and confirm passwords match 
-			if ((objPassword.value != null && objConfirmPassword.value != null) || 
-				(objPassword.value != "" && objConfirmPassword.value != "")) {
-				      if (objPassword.value == objConfirmPassword.value ) {
-				      		checkStrength(objConfirmPassword);
-				           	alert('password OK, checking strength');
-				      }
-					  else {
-						alert("please enter a passsword");
-					}
+        // check password and confirm passwords match 
+		if ((objPassword.value != null && objConfirmPassword.value != null) || 
+			(objPassword.value != "" && objConfirmPassword.value != "")) {
+			      if (objPassword.value == objConfirmPassword.value ) {
+			           	console.log(objConfirmPassword);
+			      		checkStrength(objConfirmPassword);
+			           	alert('password OK, checking strength');
+			      }
+				  else {
+					alert("Passwords do not match");
+				}
 
-			}
+		}
 		
 		}
 
+		/**
+		 * checkStrength Uses a regular expersion to check that 
+		 * the password contains at least one desimal, lower and upper case caracther
+		 * that is at least 8 characters long
+		 * @param  objConfirmPasswordIn  parses in the propose password 
+		 * @return {boolean} 
+		 */
 		function checkStrength(objConfirmPasswordIn) {
-			
-				 var pStrength = objConfirmPasswordIn;
+			var passwordStrengthRegEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/;
 
-				 var atpos=pStrength.indexOf()
-					alert("password strength has been checked");
-			  }
+			///^(?=.{8,})(*[a-z])(*[A-Z])([\d{2}])$/g;
+				 
+			var passwordStrengthTest = passwordStrengthRegEx.test(objConfirmPasswordIn.value);
+
+			console.log(passwordStrengthTest);
+
+			if(passwordStrengthTest==false){
+				alert('Please enter a password that contains at least one number, one lower case letter and one upper case letter.');
+			}
+			else{
+				alert('Password accepted');
+			}
+				 
+		 }
 
         
 
